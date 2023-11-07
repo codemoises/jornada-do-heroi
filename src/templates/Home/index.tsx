@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Heading } from '../../components/Heading';
 
 export function Home() {
   const [data, setData] = useState([]);
@@ -18,6 +19,6 @@ export function Home() {
 
 
   return (
-    <h1>oi</h1>
+    <h1>fasdf</h1>
   );
 }

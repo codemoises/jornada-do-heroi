@@ -10,8 +10,8 @@ export const theme = {
   },
   font: {
     family: {
-      default: "'Comic Neue', cursive",
-      secondary: "'Exo 2', sans-serif",
+      default: "'Exo 2', sans-serif",
+      secondary: "'Comic Neue', cursive",
     },
     sizes: {
       xsmall: '8rem',
