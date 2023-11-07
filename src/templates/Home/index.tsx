@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Heading } from '../../components/Heading';
+import Header from '../../components/Header';
 
 export function Home() {
   const [data, setData] = useState([]);
@@ -19,6 +19,6 @@ export function Home() {
 
 
   return (
-    <h1>fasdf</h1>
+    <Header />
   );
 }
