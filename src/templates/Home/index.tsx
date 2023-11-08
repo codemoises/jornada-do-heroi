@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Header from '../../components/Header';
-import Card from '../../components/Card';
+import GridContent from '../../components/GridContent';
 
 export function Home() {
   const [data, setData] = useState([]);
@@ -22,6 +22,7 @@ export function Home() {
   return (
     <>
       <Header />
+      <GridContent />
     </>
   );
 }
