@@ -50,9 +50,11 @@ export default function SearchAppBar() {
       <Toolbar
         sx={{
           display: 'flex',
+          flexDirection: [ 'column', 'row', 'row', 'row', 'row' ],
+          gap: [ '24px', '0', '0', '0', '0' ],
           justifyContent: 'space-between',
           alignItems: 'center',
-          maxWidth: '1500px',
+          maxWidth: '1600px',
           margin: '0 auto',
           padding: '10px 10px',
         }}
