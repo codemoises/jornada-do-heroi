@@ -2,6 +2,9 @@ import styled, { DefaultTheme, css } from 'styled-components';
 import { HeadingProps } from '.';
 
 const titleSize = {
+  xsmall: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.xsmall};
+  `,
   small: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.small};
   `,
