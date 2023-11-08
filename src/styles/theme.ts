@@ -14,7 +14,7 @@ export const theme = {
       secondary: "'Comic Neue', cursive",
     },
     sizes: {
-      xsmall: '8rem',
+      xsmall: '1rem',
       small: '1.6rem',
       medium: '2.4rem',
       large: '3.2rem',
@@ -25,7 +25,11 @@ export const theme = {
     },
   },
   media: {
+    lteXSmall: '(max-width: 468px)',
+    lteSmall: '(max-width: 506px)',
     lteMedium: '(max-width: 768px)',
+    lteMediumBig: '(max-width: 966px)',
+    lteMax: '(max-width: 1320px)',
   },
   spacings: {
     xsmall: '8rem',
