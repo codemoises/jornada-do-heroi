@@ -1,36 +1,45 @@
 import Box from '@mui/material/Box';
 import { Heading } from '../Heading';
 
-const borderColor = '#132719';
+export type CardComponentProps = {
+  src: string;
+  name: string;
+  power: string;
+};
 
-export default function CardComponent() {
+export default function CardComponent({ src, name, power }: CardComponentProps) {
   return (
     <Box
       sx={{
-        background: `${borderColor}`,
+        background: '#132719',
         display: 'flex',
         alignItems: 'flex-start',
         maxWidth: '154px',
         height: '215px',
         margin: '0 8px',
         padding: '0 8px',
-        border: `1px solid rgb(52,255,114,0.2)`,
+        border: '1px solid #234a2e',
         borderRadius: '8px',
       }}
     >
-      <Box sx={{ width: '110px', height: '165px', boxShadow: '1px 2px 6px 0px rgba(11,145,73,0.75);' }}>
+      <Box sx={{ width: '110px', height: '165px', boxShadow: `1px 2px 6px 0px #31563d;` }}>
         <img
           width={'100%'}
-          src="https://images.unsplash.com/photo-1699247193226-c9c5a7717013?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
+          src={src}
         />
         <Box margin={'7px 0'} textAlign={'center'}>
-          <Heading size='xsmall'>nightwing</Heading>
+          <Heading size='xsmall'>{name}</Heading>
         </Box>
-        <Box textAlign={'center'}>
-          <Heading size='xsmall' >277</Heading>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '7px' }}>
+          <SwordIcon /> <Heading size='xsmall' >{power}</Heading>
         </Box>
       </Box>
     </Box>
+  );
+}
+
+const SwordIcon = () => {
+  return (
+    <img width={12} height={9} src='/assets/images/sword.svg' alt='Icone das cartas' />
   );
 }
