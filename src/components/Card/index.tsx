@@ -5,9 +5,15 @@ export type CardComponentProps = {
   src: string;
   name: string;
   power: string;
+  intelligence: string;
+  strenght: string;
+  speed: string;
+  durability: string;
+  combat: string;
 };
 
-export default function CardComponent({ src, name, power }: CardComponentProps) {
+export default function CardComponent({ src, name, power, intelligence, strenght, speed, durability, combat }: CardComponentProps) {
+
   return (
     <Box
       sx={{

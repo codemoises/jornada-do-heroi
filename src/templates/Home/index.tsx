@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as Styled from './styles';
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { Box, styled } from '@mui/material';
 import CardButton from '../../components/CardButton';
 import CardComponent from '../../components/Card';
@@ -9,6 +9,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import { Heading } from '../../components/Heading';
+import ModalComponent from '../../components/Modal';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -67,11 +68,11 @@ export function Home() {
   }, []);
 
 
-  const dataFilter = useMemo(() => {
+  const dataFilter = () => {
   const lowerSearch = search.toLocaleLowerCase();
     return data
     .filter(p => String(p.name).toLocaleLowerCase().includes(lowerSearch));
-  }, [search]);
+  };
 
   return (
     <>
@@ -126,9 +127,10 @@ export function Home() {
         <Box>
           <CardButton />
         </Box>
+        <ModalComponent />
         <Styled.Grid>
-          {dataFilter.map((data) => (
-            <CardComponent key={data.id} src={data.images.md} name={data.name} power={data.powerstats.power} />
+          {dataFilter().map((data) => (
+            <CardComponent key={data.id} src={data.images.md} name={data.name} power={data.powerstats.power} intelligence={data.powerstats.intelligence} strenght={data.powerstats.strenght} speed={data.powerstats.speed} durability={data.powerstats.durability} combat={data.powerstats.combat} />
           ))}
         </Styled.Grid>
       </Box>
